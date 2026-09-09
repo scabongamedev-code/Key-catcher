@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bpu1hfgqrqwgo" path="res://icon.svg" id="1_ixygg"]
 [ext_resource type="PackedScene" uid="uid://xuvftmrc11i3" path="res://scenes/player.tscn" id="2_20kwy"]
+[ext_resource type="PackedScene" uid="uid://44rwuk5ynasr" path="res://scenes/the_key.tscn" id="3_nhfup"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ey1x"]
 size = Vector2(1670, 105)
@@ -21,3 +22,6 @@ shape = SubResource("RectangleShape2D_8ey1x")
 
 [node name="Player" parent="." unique_id=488925869 instance=ExtResource("2_20kwy")]
 position = Vector2(261, 155)
+
+[node name="The Key" parent="." unique_id=492661502 instance=ExtResource("3_nhfup")]
+position = Vector2(1056, 425)

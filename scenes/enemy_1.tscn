@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c3l2fcmytdtii"]
+
+[ext_resource type="Script" uid="uid://py3v35vo15t" path="res://scripts/enemy_1.gd" id="1_a1412"]
+[ext_resource type="Texture2D" uid="uid://bpu1hfgqrqwgo" path="res://icon.svg" id="1_tcmaw"]
+[ext_resource type="PackedScene" uid="uid://d4d7pxl55etm8" path="res://scenes/bullet.tscn" id="2_ejytf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_41cee"]
+size = Vector2(130, 123)
+
+[node name="Enemy 1" type="CharacterBody2D" unique_id=5630053]
+script = ExtResource("1_a1412")
+bullet = ExtResource("2_ejytf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=570186988]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_41cee")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1164140842]
+modulate = Color(1, 0.007843138, 0, 1)
+position = Vector2(0, 1)
+texture = ExtResource("1_tcmaw")
+
+[node name="Bullet Location" type="Node2D" parent="." unique_id=686181188]
+position = Vector2(-63, 0)
+
+[node name="Shoot Timer" type="Timer" parent="." unique_id=589081723]
+
+[connection signal="timeout" from="Shoot Timer" to="." method="_on_shoot_timer_timeout"]

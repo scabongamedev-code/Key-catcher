@@ -19,5 +19,5 @@ texture = ExtResource("1_ixygg")
 position = Vector2(590, 625.5)
 shape = SubResource("RectangleShape2D_8ey1x")
 
-[node name="Player" parent="simple ground/CollisionShape2D" unique_id=488925869 instance=ExtResource("2_20kwy")]
-position = Vector2(-329, -470.5)
+[node name="Player" parent="." unique_id=488925869 instance=ExtResource("2_20kwy")]
+position = Vector2(261, 155)
